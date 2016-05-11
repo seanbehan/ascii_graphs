@@ -10,7 +10,6 @@ def home():
 @app.route("/bar")
 def bar_graph():
     lst = map(lambda s: int(s), request.values.get('values').encode('utf-8').split(','))
-
     return barchart(lst), 200, {'Content-Type': 'text/plain'}
 
 if __name__=='__main__':
